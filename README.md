@@ -36,7 +36,7 @@ Para reproduzir este projeto, você vai precisar dos seguintes componentes:
 - 1 Módulo JoyStick
 - 4 Push buttons
 - 1 Potenciometro
-- 1 Sensor dht11 ou dht22
+- 1 Sensor DHT11 ou DHT22
 
 ### Instalação e configuração
 
@@ -45,11 +45,11 @@ Para reproduzir este projeto, você vai precisar dos seguintes componentes:
     git clone https://github.com/victordz-dev/GlobalSolution_DroneDeMonitoramento
     ```
 
-2. Abra o arquivo `droneDeMonitoramento.ino` na IDE do Arduino.
+2. Abra o arquivo `droneDeMonitoramento.ino` na IDE do Arduino. ([Clique aqui para baixar a IDE](https://www.arduino.cc/en/software))
 
 3. Instale as bibliotecas necessárias para o sensor, tela e motor:
 - [DHT Sensor Library](https://downloads.arduino.cc/libraries/github.com/adafruit/DHT_sensor_library-1.4.6.zip)
-- [Adafruit SSD1606](https://downloads.arduino.cc/libraries/github.com/adafruit/Adafruit_SSD1306-2.5.10.zip)
+- [Adafruit SSD1306](https://downloads.arduino.cc/libraries/github.com/adafruit/Adafruit_SSD1306-2.5.10.zip)
 - [Adafruit GFX Library](https://downloads.arduino.cc/libraries/github.com/adafruit/Adafruit_GFX_Library-1.11.9.zip)
 - [Stepper](https://downloads.arduino.cc/libraries/github.com/arduino-libraries/Stepper-1.1.3.zip?_gl=1*1023usy*_ga*MzQ2NTUyNTY1LjE3MTc1NDE2NDU.*_ga_NEXN8H46L5*MTcxNzc3OTA2NC4zLjAuMTcxNzc3OTA2OC4wLjAuMzM5NTQ1NjU1*_fplc*enI1VjJTSDB5JTJCd01qNDJWSWlxN3drOW5xTmZYVzdjNDlrNWlLRkxucWtGJTJGYTVvZXFLMXhhTmFYbjg2QkxRNGtSb1JKblhnQjRTaFBETFdWdnB2MXBhRG1nM09JMyUyRmdHYUl6bVYzeE5CRDNZbjRtMFptJTJGTEdRWU5BNyUyQnJnQSUzRCUzRA..)
 
