@@ -22,7 +22,7 @@ Este projeto consiste em um dispositivo IoT que capta dados de temperatura, sali
 
 O objetivo deste projeto é monitorar as condições da água em locais de difícil acesso e servir como objeto de interação para os turistas.
 
-O dispositivo IoT é controlado por um controle e é responsável por coletar dados de temperatura, salinidade e ph e enviar essas informações para um servidor onde podem ser processadas por um especialista em dados, depois acessadas através de um site.
+O dispositivo IoT é controlado por um controle e é responsável por coletar dados de temperatura, salinidade, ph e umidade e enviar essas informações para um servidor onde podem ser processadas por um especialista em dados, depois acessadas através de um site.
 
 ## Você também pode tantar montar o protótipo na sua casa!
 ### Hardware necessário
