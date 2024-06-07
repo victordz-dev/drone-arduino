@@ -1,4 +1,8 @@
 # Global Solution
+# Integrantes:
+João Leodoro - RM 555052\
+Tatiana Thamye - RM 554605\
+Victor Hugo - RM 559094
 ## Projeto Drone de Monitoramento de Condições Aquáticas
 Este projeto consiste em um dispositivo IoT que capta dados de temperatura, salinidade, PH da água e umidade do ambiente e os disponibiliza para visualização em um site. O repositório contém o código do Arduino utilizado para capturar esses dados. 
 
