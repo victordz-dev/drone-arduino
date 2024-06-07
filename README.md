@@ -2,6 +2,7 @@
 ## Projeto Drone de Monitoramento de Condições Aquáticas
 Este projeto consiste em um dispositivo IoT que capta dados de temperatura, salinidade, PH da água e umidade do ambiente e os disponibiliza para visualização em um site. O repositório contém o código do Arduino utilizado para capturar esses dados. 
 
+## Protótipo Wokwi
 [Clique aqui](https://wokwi.com/projects/399796899242490881) para ver o protótipo do projeto no wokwi. Como o simulador não tem os sensores de PH e salinidade, foi utilizado um potenciometro para simular a leitura desses sensores!
 
 
