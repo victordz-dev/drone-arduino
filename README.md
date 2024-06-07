@@ -1,7 +1,8 @@
 # Global Solution
-## Projeto Drone de Monitoramento de condições aquáticas
-Este projeto consiste em um dispositivo IoT que capta dados de temperatura, salinidade e PH da água e os disponibiliza para visualização em um site. O repositório contém o código do Arduino utilizado para capturar esses dados. 
+## Projeto Drone de Monitoramento de Condições Aquáticas
+Este projeto consiste em um dispositivo IoT que capta dados de temperatura, salinidade, PH da água e umidade do ambiente e os disponibiliza para visualização em um site. O repositório contém o código do Arduino utilizado para capturar esses dados. 
 
+## Protótipo Wokwi
 [Clique aqui](https://wokwi.com/projects/399796899242490881) para ver o protótipo do projeto no wokwi. Como o simulador não tem os sensores de PH e salinidade, foi utilizado um potenciometro para simular a leitura desses sensores!
 
 
@@ -55,15 +56,15 @@ Para reproduzir este projeto, você vai precisar dos seguintes componentes:
 - ➡ para entrar na opção escolhida
 - ⬅ para voltar para o menu
 
-6. Você também pode utilizar o `joyStick` para simular como seria o controle do drone, onde o eixo do motor aponta para a direção que as turbinas aquáticas se moveriam (ou seja, se você pressina para a esqueda, o eixo do motor se move para a direita, pois é para onde a turbina apontaria, fazendo assim o drone se mover para a esquerda).
+6. Você também pode utilizar o `joyStick` para simular como seria o controle do drone, onde o eixo do motor aponta para a direção que as turbinas aquáticas apontariam (ou seja, se você pressiona para a esqueda, o eixo do motor se move para a direita, pois é para onde a turbina apontaria, fazendo assim o drone se mover para a esquerda), por isso o motor esta *invertido*.
 
 ## Funcionamento
-Tente levar o dispositivo para diferentes lugares  e observe a oscilação dos dados captados pelo sensores pela tela.
-Você pode também tentar aproximar o sensor DHT de alguns obetos, como um vaporizador ou até alguma coisa quente (tenha cuidado para não se machucar ou estragar algum sensor). Você também pode observar os valores de salinidade e ph se alterando quando altera a posição do `potenciometro` à vontade.
+Tente levar o dispositivo para diferentes lugares  e observe a oscilação dos dados captados pelo sensor pela tela.
+Você pode também tentar aproximar o sensor DHT de alguns objetos, como um vaporizador ou até algo quente (tenha cuidado para não se machucar ou estragar algum sensor). Você também pode observar os valores de salinidade e ph se alterando quando a posição do `potenciometro` muda.
 
 ## Implementação
 
-Visamos a implantação do sistema para coleta de dados das condições aquáticas em locais de difícil acesso, como lugares com muito lixo na superfície. Além disso, pretendemos utilizálos como ferramenta de aprendizado e consientização dos turístas, deixando-os navegar com o drone via controle remoto. Assim, conseguimos coletar os dados em tempo real dos oceanos, além de garantir a interatividade que é essencial para o aprendizado, tornando os passeios turísticos mais informativos.
+Visamos a implantação do sistema para coleta de dados das condições aquáticas em locais de difícil acesso, como lugares com muito lixo ou gelo na superfície. Além disso, pretendemos utilizá-los como ferramenta de aprendizado e consientização dos turístas, deixando-os navegar com o drone via controle remoto. Assim, conseguimos coletar os dados em tempo real dos oceanos, além de garantir a interatividade que é essencial para o aprendizado, tornando os passeios turísticos mais consientizadores sobre a preservação do ecossistema marinho.
 
 ## Construído com  🛠️  🛠️ 
 
