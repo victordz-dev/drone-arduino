@@ -2,6 +2,7 @@
   #include <Adafruit_SSD1306.h> //inclui a biblioteca do display
   #include <Adafruit_GFX.h> //inclui a biblioteca do display
   #include <Stepper.h> //inclui a biblioteca do motor
+  #include <DHT.h> //inclui a biblioteca do sensor de temperatura
 //----------------------------------------------------------------------//
 
 //setando parâmetros do display
@@ -34,6 +35,7 @@
   #define passosMotor 200
   Adafruit_SSD1306 OLED = Adafruit_SSD1306(width, height, &Wire, reset);
   Stepper motor(passosMotor, 8, 9, 10, 11);
+  DHT sensor(A3, DHT22);
 //----------------------------------------------------------------------//
 
 //variaveis utilizadas nas funções
@@ -86,28 +88,23 @@
   }
 //----------------------------------------------------------------------//
 
-//função que simula o sensor de temperatura
+//função que chama o sensor de temperatura
   void temperatura(){
-    int potValue = analogRead(pot);
+    int temp = sensor.readTemperature();
 
-    float voltagem = potValue * (5.0/1023.0); //converte a leitura do potenciômetro para voltagem
-    float minTemp = -20.0;
-    float maxTemp = 120.0;
-    float temp = minTemp + (voltagem * ((maxTemp - minTemp) / 5.0)); //converte a voltagem para temperatura nos padrões de temperatura oceanica
-
-    OLED.clearDisplay(); //configura o display
+    OLED.clearDisplay();
     OLED.setTextSize(1);
-    OLED.setCursor(30,0);
+    OLED.setCursor(25,0);
     OLED.print("Temperatura");
     OLED.setTextSize(2);
     OLED.setCursor(30,25);
-    OLED.print((int)temp);
+    OLED.print(temp);
     OLED.setCursor(80,25);
     OLED.print("c");
     OLED.drawCircle(70,25,2,WHITE);
     OLED.display();
 
-    if (temp > 40 || temp < -5){ //bloco que verifica se a temperatura esta fora do padrão
+    if (temp > 40 || temp < -5){
       alerta();
     }else{
       normal();
@@ -170,6 +167,28 @@
   }
 //----------------------------------------------------------------------//
 
+// função que chama o sensor de umidade
+  void umidade(){
+    int umid = sensor.readHumidity();
+
+    OLED.clearDisplay();
+    OLED.setTextColor(SSD1306_WHITE);
+    OLED.setTextSize(1);
+    OLED.setCursor(40,0);
+    OLED.print("Umidade");
+    OLED.setTextSize(2);
+    OLED.setCursor(40,25);
+    OLED.print(umid);
+    OLED.setCursor(80,25);
+    OLED.print("%");
+    OLED.display();
+
+      if (umid >= 90){
+        normal();
+      }else{
+        alerta();
+      }
+  }
 //função que permite navegar para observar qual dado deseja
   void menu(){
     if (digitalRead(down) == LOW){ //bloco que verifica se o botão foi clicado
@@ -193,10 +212,11 @@
       delay(250);
     }
 
-    const char *opcoes[3] = { //opções do menu
+    const char *opcoes[4] = { //opções do menu
       "Temperatura",
       "Salinidade",
-      "PH"
+      "PH",
+      "Umidade"
     };
 
     if (preenchido == -1){ //configura o display
@@ -207,13 +227,13 @@
       OLED.println(F("MENU"));
       OLED.println("");
 
-      for (int i = 0; i < 3; i++){ //bloco que mostra as seleções do menu
+      for (int i = 0; i < 4; i++){ //bloco que mostra as seleções do menu
         if (selecionado < 0){ //bloco que impede de selecionar uma opção que não existe
           selecionado = 0;
         } 
         
-        if (selecionado > 2){ //bloco que impede de selecionar uma opção que não existe
-          selecionado = 2;
+        if (selecionado > 3){ //bloco que impede de selecionar uma opção que não existe
+          selecionado = 3;
         }
 
         if (i == selecionado){ //bloco que mostra a seleção atual
@@ -237,6 +257,10 @@
 
     if (preenchido == 2){ //bloco que chama a função de ph
       ph();
+    }
+
+    if (preenchido == 3){ //bloco que chama a função de ph
+      umidade();
     }
 
     OLED.display(); 
@@ -283,6 +307,7 @@ void setup(){
     delay(1000);
     OLED.clearDisplay();//limpa o display
   motor.setSpeed(100); //seta a velocidade do motor de passos
+  sensor.begin(); //inicia o sensor de temperatura e umidade
 }
 
 void loop(){
