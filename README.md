@@ -60,7 +60,7 @@ Para reproduzir este projeto, você vai precisar dos seguintes componentes:
 - ➡ para entrar na opção escolhida
 - ⬅ para voltar para o menu
 
-6. Você também pode utilizar o `joyStick` para simular como seria o controle do drone, onde o eixo do motor aponta para a direção que as turbinas aquáticas apontariam (ou seja, se você pressiona para a esqueda, o eixo do motor se move para a direita, pois é para onde a turbina apontaria, fazendo assim o drone se mover para a esquerda), por isso o motor esta *invertido*.
+6. Você também pode utilizar o `joyStick` para simular como seria o controle do drone, onde o eixo do motor aponta para a direção que as turbinas aquáticas apontariam (ou seja, se você pressiona para a esqueda, o eixo do motor se move para a direita, pois é para onde a turbina apontaria, fazendo assim o drone se mover para a esquerda), por isso o motor esta *invertido*. Você também pode dar um click no `pushButton` do joyStick para acender um led branco! Foi produzido para simular uma lanterna, que iria ajudar a observar o fundo do mar com uma câmera acoplada no drone.
 
 ## Funcionamento
 Tente levar o dispositivo para diferentes lugares  e observe a oscilação dos dados captados pelo sensor pela tela.
