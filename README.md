@@ -1,8 +1,3 @@
-# Global Solution
-# Integrantes:
-João Leodoro - RM 555052\
-Tatiana Thamye - RM 554605\
-Victor Hugo - RM 559094
 ## Projeto Drone de Monitoramento de Condições Aquáticas
 Este projeto consiste em um dispositivo IoT que capta dados de temperatura, salinidade, PH da água e umidade do ambiente e os disponibiliza para visualização em um site. O repositório contém o código do Arduino utilizado para capturar esses dados. 
 
@@ -20,7 +15,7 @@ Este projeto consiste em um dispositivo IoT que capta dados de temperatura, sali
 
 ## Descrição do Projeto
 
-O objetivo deste projeto é monitorar as condições da água em locais de difícil acesso e servir como objeto de interação para os turistas.
+O objetivo deste projeto é monitorar as condições da água em locais de difícil acesso.
 
 O dispositivo IoT é controlado por um controle e é responsável por coletar dados de temperatura, salinidade, ph e umidade e enviar essas informações para um servidor onde podem ser processadas por um especialista em dados, depois acessadas através de um site.
 
@@ -42,7 +37,7 @@ Para reproduzir este projeto, você vai precisar dos seguintes componentes:
 
 1. Clone este repositório para o seu ambiente local:
     ```
-    git clone https://github.com/victordz-dev/GlobalSolution_DroneDeMonitoramento
+    git clone https://github.com/victordz-dev/drone-arduino
     ```
 
 2. Abra o arquivo `droneDeMonitoramento.ino` na IDE do Arduino. ([Clique aqui para baixar a IDE](https://www.arduino.cc/en/software))
@@ -68,7 +63,7 @@ Você pode também tentar aproximar o sensor DHT de alguns objetos, como um vapo
 
 ## Implementação
 
-Visamos a implantação do sistema para coleta de dados das condições aquáticas em locais de difícil acesso, como lugares com muito lixo ou gelo na superfície. Além disso, pretendemos utilizá-los como ferramenta de aprendizado e consientização dos turístas, deixando-os navegar com o drone via controle remoto. Assim, conseguimos coletar os dados em tempo real dos oceanos, além de garantir a interatividade que é essencial para o aprendizado, tornando os passeios turísticos mais consientizadores sobre a preservação do ecossistema marinho.
+Visamos a implantação do sistema para coleta de dados das condições aquáticas em locais de difícil acesso, como lugares com muito lixo ou gelo na superfície.
 
 ## Construído com  🛠️  🛠️ 
 
